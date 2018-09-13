@@ -1,4 +1,4 @@
-# Packaging the React app with Spring Boot
+# Packaging React frontends with Spring Boot backends
 This example shows you how to combine Create React App with Spring Boot, giving you one single jar file to deploy. 
 
 ## Good reads
