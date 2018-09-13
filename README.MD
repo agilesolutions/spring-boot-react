@@ -1,4 +1,7 @@
 # Packaging the React app with Spring Boot
-We'd like to be able to publish one jar file to production, and that jar file should contain both the backend and the frontend. 
+This example shows you how to combine Create React App with Spring Boot, giving you one single jar file to deploy. 
 
-[jar file should contain both the backend and the frontend](https://github.com/kantega/react-and-spring#webapp-with-create-react-app-and-spring-boot)
+## Good reads
+
+1. [Package React frontend with Spring Boot backend to one jar](https://github.com/kantega/react-and-spring#webapp-with-create-react-app-and-spring-boot)
+2. [React.js and Spring Data REST tutorial](https://spring.io/guides/tutorials/react-and-spring-data-rest/)
