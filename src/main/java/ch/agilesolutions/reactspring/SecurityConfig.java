@@ -28,7 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	  protected void configure(HttpSecurity http) throws Exception {
 		 http.csrf().disable().cors().and().authorizeRequests()
 		  .antMatchers("/**").permitAll()
-		  .antMatchers("/h2-console").anonymous()
+//		  .antMatchers("/h2-console").anonymous()
 	        .anyRequest().authenticated()
 	        .and()
 	        // Filter for the api/login requests
@@ -43,7 +43,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	  CorsConfigurationSource corsConfigurationSource() {
 	      UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 	      CorsConfiguration config = new CorsConfiguration();
-			config.setAllowedOrigins(Arrays.asList("*"));
+	       config.setAllowedOrigins(Arrays.asList("http://localhost"));
+			//config.setAllowedOrigins(Arrays.asList("*"));
 			config.setAllowedMethods(Arrays.asList("*"));
 			config.setAllowedHeaders(Arrays.asList("*"));
 			config.setAllowCredentials(true);
