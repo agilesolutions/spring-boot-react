@@ -10,3 +10,4 @@ This example shows you how to combine Create React App with Spring Boot, giving 
 5. [About: Cross Origin Requests](https://spring.io/guides/gs/rest-service-cors/)
 6. [About: React Component State](https://reactjs.org/docs/faq-state.html
 7. [Another one about React states](https://css-tricks.com/understanding-react-setstate/)
+8. [Creating a new web app using create-react-app and Spring Boot](http://matejsprogblog.blogspot.com/2017/06/creating-new-web-app-using-create-react.html)
