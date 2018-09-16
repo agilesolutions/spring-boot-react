@@ -8,4 +8,5 @@ This example shows you how to combine Create React App with Spring Boot, giving 
 3. [Getting started with react](https://reactjs.org/tutorial/tutorial.html)
 4. [About: Cross Site Request Forgery (CSRF)](https://docs.spring.io/spring-security/site/docs/current/reference/html/csrf.html)
 5. [About: Cross Origin Requests](https://spring.io/guides/gs/rest-service-cors/)
-6. [About: React Component State](https://reactjs.org/docs/faq-state.html)
+6. [About: React Component State](https://reactjs.org/docs/faq-state.html
+7. [Another one about React states](https://css-tricks.com/understanding-react-setstate/)
