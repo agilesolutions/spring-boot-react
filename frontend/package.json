@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^1.0.0",
-    "@material-ui/icons": "^1.0.0",
-    "material-ui": "^0.20.1",
-    "react": "^16.3.2",
-    "react-confirm-alert": "^2.0.2",
-    "react-csv": "^1.0.14",
-    "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4",
-    "react-skylight": "^0.5.1",
-    "react-table": "^6.8.2"
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
+    "material-ui": "latest",
+    "react": "latest",
+    "react-confirm-alert": "latest",
+    "react-csv": "latest",
+    "react-dom": "latest",
+    "react-scripts": "latest",
+    "react-skylight": "latest",
+    "react-table": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,10 +21,9 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "jest-enzyme": "^6.0.0",
-    "react-test-renderer": "^16.3.2"
-  },
-  "proxy": "http://localhost:8080/"
+    "enzyme": "latest",
+    "enzyme-adapter-react-16": "latest",
+    "jest-enzyme": "latest",
+    "react-test-renderer": "latest"
+  }
 }

@@ -11,12 +11,16 @@ import Grid from '@material-ui/core/Grid';
 import Snackbar from '@material-ui/core/Snackbar';
 
 class Carlist extends Component {
+	
+	
   constructor(props) {
     super(props);
     this.state = { cars: [], open: false, message: ''};
   }
 
   componentDidMount() {
+
+
     this.fetchCars();
   }
   
@@ -127,6 +131,7 @@ class Carlist extends Component {
   };
 
   render() {
+	  
     const columns = [{
       Header: 'Brand',
       accessor: 'brand',
@@ -164,23 +169,25 @@ class Carlist extends Component {
     }]
 
     return (
-      <div className="App">
-        <Grid container>
-          <Grid item>
-          <AddCar addCar={this.addCar} fetchCars={this.fetchCars}/>
-          </Grid>
-          <Grid item style={{padding: 20}}>
-            <CSVLink data={this.state.cars} separator=";">Export CSV</CSVLink>
-          </Grid>
-        </Grid>
+    	      <div>
+    	        <Grid container>
+    	          <Grid item>
+    	          <AddCar addCar={this.addCar} fetchCars={this.fetchCars}/>
+    	          </Grid>
+    	          <Grid item style={{padding: 20}}>
+    	            <CSVLink data={this.state.cars} separator=";">Export CSV</CSVLink>
+    	          </Grid>
+    	        </Grid>
 
-        <ReactTable data={this.state.cars} columns={columns} 
-          filterable={true} pageSize={10}/>
-        <Snackbar           
-          open={this.state.open}  onClose={this.handleClose} 
-          autoHideDuration={1500} message={this.state.message} />
-      </div>
-    );
+    	        <ReactTable data={this.state.cars} columns={columns} 
+    	          filterable={true} pageSize={10}/>
+    	        <Snackbar           
+    	          open={this.state.open}  onClose={this.handleClose} 
+    	          autoHideDuration={1500} message={this.state.message} />
+    	      </div>
+    	    );
+
+
   }
 }
 
