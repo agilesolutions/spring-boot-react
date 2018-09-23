@@ -1,4 +1,4 @@
-package ch.agilesolutions.reactspring.service;
+package ch.agilesolutions.jdo.service;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

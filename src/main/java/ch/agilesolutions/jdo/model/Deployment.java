@@ -1,5 +1,4 @@
 package ch.agilesolutions.jdo.model;
-;
 
 import com.google.gson.annotations.Expose;
 import ch.agilesolutions.jdo.annotations.Attribute;

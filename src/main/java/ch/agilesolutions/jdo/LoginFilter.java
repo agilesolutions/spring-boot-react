@@ -18,7 +18,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import ch.agilesolutions.jdo.domain.AccountCredentials;
-import ch.agilesolutions.reactspring.service.AuthenticationService;
+import ch.agilesolutions.jdo.service.AuthenticationService;
 
 public class LoginFilter extends AbstractAuthenticationProcessingFilter {
 

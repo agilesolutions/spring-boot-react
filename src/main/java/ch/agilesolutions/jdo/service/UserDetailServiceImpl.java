@@ -1,4 +1,4 @@
-package ch.agilesolutions.reactspring.service;
+package ch.agilesolutions.jdo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;

@@ -1,5 +1,4 @@
 package ch.agilesolutions.jdo.model;
-;
 
 import java.util.ArrayList;
 import java.util.List;

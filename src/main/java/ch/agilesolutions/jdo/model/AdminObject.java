@@ -2,23 +2,15 @@ package ch.agilesolutions.jdo.model;
 
 import ch.agilesolutions.jdo.annotations.Attribute;
 import ch.agilesolutions.jdo.annotations.WidgetType;
-import com.google.gson.annotations.Expose;
 
 
 public class AdminObject {
-	@Expose(serialize = true)
 	private String name;
-	@Expose(serialize = true)
 	private String className;
-	@Expose(serialize = true)
 	private Boolean mdb;
-	@Expose(serialize = true)
 	private Integer id;
-	@Expose(serialize = true)
 	private String configProperty;
-	@Expose(serialize = true)
 	private String jndiName;
-	@Expose(serialize = true)
 	private String description;
 
 	@Attribute(order = 1, length = 20, required=true, type = WidgetType.INPUT)
