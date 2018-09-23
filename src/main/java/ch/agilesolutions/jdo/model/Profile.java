@@ -32,8 +32,6 @@ public class Profile {
 	
 	private Integer buildNumber;
 	
-	private Host host;
-	
 	private String environment;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="profile")
@@ -117,13 +115,6 @@ public class Profile {
 		this.buildNumber = buildNumber;
 	}
 
-	public Host getHost() {
-		return host;
-	}
-
-	public void setHost(Host host) {
-		this.host = host;
-	}
 
 	public String getEnvironment() {
 		return environment;

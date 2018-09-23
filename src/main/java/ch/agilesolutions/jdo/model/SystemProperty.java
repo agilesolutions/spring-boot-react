@@ -1,17 +1,20 @@
 package ch.agilesolutions.jdo.model;
 
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import ch.agilesolutions.jdo.annotations.Attribute;
-import ch.agilesolutions.jdo.annotations.WidgetType;
-import ch.agilesolutions.jdo.domain.Owner;
 
-
+@Entity
 public class SystemProperty {
 	
-	private Integer id;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long id;
 	
 	private String name;
 	
@@ -29,10 +32,10 @@ public class SystemProperty {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Integer getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public Integer getVersion() {
