@@ -12,10 +12,9 @@ import javax.persistence.ManyToOne;
 @Entity
 public class SystemProperty {
 	
-	public SystemProperty(String name, Integer version, String value, Profile profile) {
+	public SystemProperty(String name, String value, Profile profile) {
 		super();
 		this.name = name;
-		this.version = version;
 		this.value = value;
 		this.profile = profile;
 	}
@@ -25,8 +24,6 @@ public class SystemProperty {
 	private long id;
 	
 	private String name;
-	
-	private Integer version;
 	
 	private String value;
 	
@@ -46,12 +43,7 @@ public class SystemProperty {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public Integer getVersion() {
-		return version;
-	}
-	public void setVersion(Integer version) {
-		this.version = version;
-	}
+
 
 	public String getDescription() {
 		return String.format("name = %s and value = %s", name,value);

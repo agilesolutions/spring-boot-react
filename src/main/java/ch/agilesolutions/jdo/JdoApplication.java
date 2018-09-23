@@ -16,6 +16,8 @@ import ch.agilesolutions.jdo.model.Domain;
 import ch.agilesolutions.jdo.model.DomainRepository;
 import ch.agilesolutions.jdo.model.Profile;
 import ch.agilesolutions.jdo.model.ProfileRepository;
+import ch.agilesolutions.jdo.model.SystemProperty;
+import ch.agilesolutions.jdo.model.SystemPropertyRepository;
 
 @SpringBootApplication
 public class JdoApplication {
@@ -33,6 +35,9 @@ public class JdoApplication {
 
 	@Autowired	
 	private ProfileRepository profileRepository;	
+
+	@Autowired	
+	private SystemPropertyRepository systemPropertyRepository;	
 	
 	public static void main(String[] args) {
 		SpringApplication.run(JdoApplication.class, args);
@@ -51,6 +56,10 @@ public class JdoApplication {
 			profileRepository.save(profile1);
 			profileRepository.save(profile2);
 			
+			SystemProperty systemProperty1 = new SystemProperty("property 1", "value 1", profile1);
+			SystemProperty systemProperty2 = new SystemProperty("property 2", "value 2", profile1);
+			systemPropertyRepository.save(systemProperty1);
+			systemPropertyRepository.save(systemProperty2);
 			
 			
 			
