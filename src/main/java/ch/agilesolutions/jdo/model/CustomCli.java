@@ -1,9 +1,5 @@
 package ch.agilesolutions.jdo.model;
 
-
-import com.google.gson.annotations.Expose;
-
-
 public class CustomCli {
 	
 	private String cli;

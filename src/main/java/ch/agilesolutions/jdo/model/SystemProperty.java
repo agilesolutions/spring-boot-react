@@ -1,7 +1,12 @@
 package ch.agilesolutions.jdo.model;
 
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 import ch.agilesolutions.jdo.annotations.Attribute;
 import ch.agilesolutions.jdo.annotations.WidgetType;
+import ch.agilesolutions.jdo.domain.Owner;
 
 
 public class SystemProperty {
@@ -13,8 +18,11 @@ public class SystemProperty {
 	private Integer version;
 	
 	private String value;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "profile")
+	private Profile profile;
 
-	@Attribute(order = 1, length = 60, required=true, type = WidgetType.INPUT)	
 	public String getName() {
 		return name;
 	}
@@ -37,7 +45,7 @@ public class SystemProperty {
 	public String getDescription() {
 		return String.format("name = %s and value = %s", name,value);
 	}
-	@Attribute(order = 2, length = 60, required=true, type = WidgetType.INPUT)	
+
 	public String getValue() {
 		return value;
 	}
