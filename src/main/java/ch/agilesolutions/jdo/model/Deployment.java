@@ -1,23 +1,22 @@
 package ch.agilesolutions.jdo.model;
 
-import com.google.gson.annotations.Expose;
 import ch.agilesolutions.jdo.annotations.Attribute;
 import ch.agilesolutions.jdo.annotations.WidgetType;
 
 public class Deployment {
-	@Expose(serialize = true)
+	
 	private String name;
-	@Expose(serialize = true)
+	
 	private String artifact;
-	@Expose(serialize = true)
+	
 	private String groupIdentification;
-	@Expose(serialize = true)
+	
 	private Integer id;
-	@Expose(serialize = true)
+	
 	private Integer versionnumber;
-	@Expose(serialize = true)
+	
 	private String type;
-	@Expose(serialize = true)
+	
 	private String version;
 
 	@Attribute(order = 2, length = 40, required=true, type = WidgetType.INPUT)

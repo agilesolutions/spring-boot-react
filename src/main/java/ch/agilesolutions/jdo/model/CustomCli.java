@@ -5,11 +5,11 @@ import com.google.gson.annotations.Expose;
 
 
 public class CustomCli {
-	@Expose(serialize = true)
+	
 	private String cli;
-	@Expose(serialize = true)
+	
 	private Integer id;
-	@Expose(serialize = true)
+	
 	private Integer version;
 
 	public String getCli() {

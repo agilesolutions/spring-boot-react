@@ -1,24 +1,21 @@
 package ch.agilesolutions.jdo.model;
 
-import com.google.gson.annotations.Expose;
-
-
 public class Host {
-	@Expose(serialize = true)
+	
 	private Boolean loadBalanced;
-	@Expose(serialize = true)
+	
 	private Boolean productive;
-	@Expose(serialize = true)
+	
 	private Build build;
-	@Expose(serialize = true)
+	
 	private String domain;
-	@Expose(serialize = true)
+	
 	private String name;
-	@Expose(serialize = true)
+	
 	private String description;
-	@Expose(serialize = true)
+	
 	private Integer id;
-	@Expose(serialize = true)
+	
 	private Boolean exportHomeLink;
 
 	public Boolean getLoadBalanced() {

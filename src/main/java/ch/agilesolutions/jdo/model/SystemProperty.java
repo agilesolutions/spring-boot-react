@@ -1,18 +1,17 @@
 package ch.agilesolutions.jdo.model;
 
-import com.google.gson.annotations.Expose;
 import ch.agilesolutions.jdo.annotations.Attribute;
 import ch.agilesolutions.jdo.annotations.WidgetType;
 
 
 public class SystemProperty {
-	@Expose(serialize = true)
+	
 	private Integer id;
-	@Expose(serialize = true)
+	
 	private String name;
-	@Expose(serialize = true)
+	
 	private Integer version;
-	@Expose(serialize = true)
+	
 	private String value;
 
 	@Attribute(order = 1, length = 60, required=true, type = WidgetType.INPUT)	

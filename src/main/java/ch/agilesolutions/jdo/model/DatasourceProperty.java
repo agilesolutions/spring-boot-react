@@ -2,7 +2,6 @@ package ch.agilesolutions.jdo.model;
 
 import java.io.Serializable;
 
-import com.google.gson.annotations.Expose;
 import ch.agilesolutions.jdo.annotations.Attribute;
 import ch.agilesolutions.jdo.annotations.WidgetType;
 
@@ -13,13 +12,13 @@ public class DatasourceProperty implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@Expose(serialize = true)
+	
 	private String name;
 
-	@Expose(serialize = true)
+	
 	private String description;
 
-	@Expose(serialize = true)
+	
 	private String value;
 
 	@Attribute(order = 1, length = 30, required=true, type = WidgetType.INPUT)

@@ -1,26 +1,24 @@
 package ch.agilesolutions.jdo.model;
 
 
-import com.google.gson.annotations.Expose;
-
 import ch.agilesolutions.jdo.annotations.Attribute;
 import ch.agilesolutions.jdo.annotations.WidgetType;
 
 
 public class Driver {
-	@Expose(serialize = true)
+	
 	private String name;
-	@Expose(serialize = true)
+	
 	private String description;
-	@Expose(serialize = true)
+	
 	private String moduleName;
-	@Expose(serialize = true)
+	
 	private Boolean distributed;
-	@Expose(serialize = true)
+	
 	private String className;
-	@Expose(serialize = true)
+	
 	private Integer id;
-	@Expose(serialize = true)
+	
 	private Integer version;
 
 	@Attribute(order = 1, length = 30, required=true,type = WidgetType.INPUT)

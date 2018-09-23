@@ -3,34 +3,31 @@ package ch.agilesolutions.jdo.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.google.gson.annotations.Expose;
-
 import ch.agilesolutions.jdo.annotations.Attribute;
 import ch.agilesolutions.jdo.annotations.WidgetType;
 
 public class Datasource {
-	@Expose(serialize = true)
 	private Integer id;
-	@Expose(serialize = true)
+	
 	private String name;
-	@Expose(serialize = true)
+	
 	private String datasourceClass;
-	@Expose(serialize = true)
+	
 	private String password;
-	@Expose(serialize = true)
+	
 	private String driver;
-	@Expose(serialize = true)
+	
 	private Boolean distributed;
-	@Expose(serialize = true)
+	
 	private String userName;
-	@Expose(serialize = true)
+	
 	private Integer version;
-	@Expose(serialize = true)
+	
 	private String url;
-	@Expose(serialize = true)
+	
 	private String jndiName;
 	
-	@Expose(serialize = true)
+	
 	private List<DatasourceProperty> properties = new ArrayList<>();
 
 	@Attribute(order = 4, length = 50, required=true, type = WidgetType.INPUT)	

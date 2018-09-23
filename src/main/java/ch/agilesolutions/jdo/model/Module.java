@@ -1,16 +1,13 @@
 package ch.agilesolutions.jdo.model;
 
-import com.google.gson.annotations.Expose;
-
-
 public class Module {
-	@Expose(serialize = true)
+	
 	private String path;
-	@Expose(serialize = true)
+	
 	private String name;
-	@Expose(serialize = true)
+	
 	private Integer id;
-	@Expose(serialize = true)
+	
 	private Integer version;
 
 	public String getPath() {

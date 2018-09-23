@@ -1,11 +1,7 @@
 package ch.agilesolutions.jdo.model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import com.google.gson.annotations.Expose;
 
 import ch.agilesolutions.jdo.annotations.Attribute;
 import ch.agilesolutions.jdo.annotations.Component;
@@ -14,67 +10,67 @@ import ch.agilesolutions.jdo.annotations.WidgetType;
 	
 @Root
 public class Profile {
-	@Expose(serialize = true)
+	
 	private Integer id;
-	@Expose(serialize = true)
+	
 	private String name;
-	@Expose(serialize = true)
+	
 	private String hostName;
-	@Expose(serialize = true)
+	
 	private String releaseTag;
-	@Expose(serialize = true)
+	
 	private String domain;
-	@Expose(serialize = true)
+	
 	private List<Logger> loggers = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private String prefix;
-	@Expose(serialize = true)
+	
 	private String jboss;
-	@Expose(serialize = true)
+	
 	private String jdk;
-	@Expose(serialize = true)
+	
 	private String description;
-	@Expose(serialize = true)
+	
 	private Integer buildNumber;
-	@Expose(serialize = true)
+	
 	private List<SystemProperty> systemProperties = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private List<MailSession> mailSessions = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private Host host;
-	@Expose(serialize = true)
+	
 	private List<Object> securityDomains = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private CustomCli customCli;
-	@Expose(serialize = true)
+	
 	private String jiraKey;
-	@Expose(serialize = true)
+	
 	private List<QueueFactory> queueFactories = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private Integer version;
-	@Expose(serialize = true)
+	
 	private List<Module> modules = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private String component;
-	@Expose(serialize = true)
+	
 	private String environment;
-	@Expose(serialize = true)
+	
 	private List<Deployment> deployments = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private List<AlternateName> alternateNames = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private List<Object> extensions = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private List<Datasource> datasources = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private List<Handler> handlers = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private List<Argument> arguments = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private List<SocketBinding> socketBindings = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private List<Driver> drivers = new ArrayList<>();
-	@Expose(serialize = true)
+	
 	private String gitBranch;
 
 	@Attribute(order = 1, length = 30, required=true, type = WidgetType.INPUT)

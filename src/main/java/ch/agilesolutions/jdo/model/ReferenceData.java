@@ -6,26 +6,24 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.google.gson.annotations.Expose;
-
 
 public class ReferenceData {
-	@Expose(serialize = true)
+	
 	private List<String> formatters = new ArrayList<>();
 	
-	@Expose(serialize = true)
+	
 	private List<String> levels = new ArrayList<>();
 	
-	@Expose(serialize = true)
+	
 	private List<String> handlertypes = new ArrayList<>();
 	
-	@Expose(serialize = true)
+	
 	private Map<String,String> environments = new HashMap<>();
 	
-	@Expose(serialize = true)
+	
 	private List<String> runtimes = new ArrayList<>();
 	
-	@Expose(serialize = true)
+	
 	private List<String> machines = new ArrayList<>();
 
 	public List<String> getFormatters() {

@@ -1,32 +1,29 @@
 package ch.agilesolutions.jdo.model;
 
-import com.google.gson.annotations.Expose;
-
-
 public class MailSession {
-	@Expose(serialize = true)
+	
 	private String smtpServer;
-	@Expose(serialize = true)
+	
 	private Boolean smtpSSL;
-	@Expose(serialize = true)
+	
 	private String smtpUserName;
-	@Expose(serialize = true)
+	
 	private Integer smtpPort;
-	@Expose(serialize = true)
+	
 	private String name;
-	@Expose(serialize = true)
+	
 	private String smtpPassword;
-	@Expose(serialize = true)
+	
 	private Boolean debugSwitch;
-	@Expose(serialize = true)
+	
 	private String fromAddress;
-	@Expose(serialize = true)
+	
 	private Integer id;
-	@Expose(serialize = true)
+	
 	private Integer version;
-	@Expose(serialize = true)
+	
 	private String smtpName;
-	@Expose(serialize = true)
+	
 	private String jndiName;
 
 	public String getSmtpServer() {

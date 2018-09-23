@@ -1,27 +1,25 @@
 package ch.agilesolutions.jdo.model;
 
-import com.google.gson.annotations.Expose;
-
 import ch.agilesolutions.jdo.annotations.Attribute;
 import ch.agilesolutions.jdo.annotations.WidgetType;
 
 public class SocketBinding {
 
-	@Expose(serialize = true)
+	
 	private String portOffset;
-	@Expose(serialize = true)
+	
 	private String http;
-	@Expose(serialize = true)
+	
 	private String https;
-	@Expose(serialize = true)
+	
 	private String ajp;
-	@Expose(serialize = true)
+	
 	private String remoting;
-	@Expose(serialize = true)
+	
 	private String managementNative;
-	@Expose(serialize = true)
+	
 	private String managementHttp;
-	@Expose(serialize = true)
+	
 	private String managementHttps;
 
 	@Attribute(order = 1, length = 4, required = true, type = WidgetType.INPUT)

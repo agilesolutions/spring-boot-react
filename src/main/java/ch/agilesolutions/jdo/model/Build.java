@@ -1,19 +1,10 @@
 package ch.agilesolutions.jdo.model;
 
-
-import com.google.gson.annotations.Expose;
-
-
 public class Build {
-	@Expose(serialize = true)
 	private String releaseTag;
-	@Expose(serialize = true)
 	private String name;
-	@Expose(serialize = true)
 	private Boolean defaultBuild;
-	@Expose(serialize = true)
 	private String description;
-	@Expose(serialize = true)
 	private Integer id;
 
 	public String getReleaseTag() {
