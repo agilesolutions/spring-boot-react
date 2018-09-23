@@ -12,6 +12,14 @@ import javax.persistence.ManyToOne;
 @Entity
 public class SystemProperty {
 	
+	public SystemProperty(String name, Integer version, String value, Profile profile) {
+		super();
+		this.name = name;
+		this.version = version;
+		this.value = value;
+		this.profile = profile;
+	}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;

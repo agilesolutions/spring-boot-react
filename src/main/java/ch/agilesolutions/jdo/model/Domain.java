@@ -14,6 +14,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Domain {
 
+	public Domain(String name, String description) {
+		super();
+		this.name = name;
+		this.description = description;
+	}
+
 	public long getId() {
 		return id;
 	}

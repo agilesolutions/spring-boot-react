@@ -25,13 +25,7 @@ public class Profile {
 	
 	private String hostName;
 	
-	private String prefix;
-	
-	private String jdk;
-	
 	private String description;
-	
-	private Integer buildNumber;
 	
 	private String environment;
 	
@@ -40,6 +34,8 @@ public class Profile {
 	private Domain domain;
 
 	
+
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="profile")
 	@JsonIgnore
 	private List<SystemProperty> systemProperties;
@@ -90,23 +86,6 @@ public class Profile {
 		this.domain = domain;
 	}
 
-
-	public String getPrefix() {
-		return prefix;
-	}
-
-	public void setPrefix(String prefix) {
-		this.prefix = prefix;
-	}
-
-	public String getJdk() {
-		return jdk;
-	}
-
-	public void setJdk(String jdk) {
-		this.jdk = jdk;
-	}
-
 	public String getDescription() {
 		return description;
 	}
@@ -115,12 +94,13 @@ public class Profile {
 		this.description = description;
 	}
 
-	public Integer getBuildNumber() {
-		return buildNumber;
-	}
-
-	public void setBuildNumber(Integer buildNumber) {
-		this.buildNumber = buildNumber;
+	public Profile(String name, String hostName, String description, String environment, Domain domain) {
+		super();
+		this.name = name;
+		this.hostName = hostName;
+		this.description = description;
+		this.environment = environment;
+		this.domain = domain;
 	}
 
 
