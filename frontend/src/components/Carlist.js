@@ -10,6 +10,8 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Snackbar from '@material-ui/core/Snackbar';
 
+
+
 class Carlist extends Component {
 	
 	
@@ -27,7 +29,7 @@ class Carlist extends Component {
   // Fetch all cars
   fetchCars = () => {
     const token = sessionStorage.getItem("jwt");
-    fetch('/api/cars', 
+    fetch(SERVER_URL + 'api/cars',
     {
       headers: {'Authorization': token}
     })

@@ -4,6 +4,10 @@ import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import Carlist from './Carlist';
 import {SERVER_URL} from '../constants.js';
+import ClippedDrawer from './ClippedDrawer';
+
+
+
 
 class Login extends Component {
   constructor(props) {
@@ -49,6 +53,8 @@ class Login extends Component {
     else {
       return (
         <div>
+	      <ClippedDrawer />  
+
           <br/>
           <TextField type="text" name="username" placeholder="Username" 
           onChange={this.handleChange} /><br/>  
