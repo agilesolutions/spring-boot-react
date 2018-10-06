@@ -24,6 +24,8 @@
     "enzyme": "latest",
     "enzyme-adapter-react-16": "latest",
     "jest-enzyme": "latest",
-    "react-test-renderer": "latest"
+    "react-test-renderer": "latest",
+    "npm-install-webpack-plugin": "^4.0.4",
+    "webpack": "^2.2.1"
   }
 }

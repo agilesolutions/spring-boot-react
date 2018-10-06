@@ -8,44 +8,5 @@ module.exports = {
   output: {
     path: __dirname,
     filename: './src/main/resources/static/build/bundle.js'
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-                cacheDirectory: false,
-                presets: ['es2015', 'react']
-            }
-          }
-        ]
-      },
-      {
-        test: /\.less$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          },
-          {
-            loader: "less-loader"
-          }
-        ]
-      },
-      {
-        test: /\.(jpg|gif|png)$/,
-        use: [
-          {
-            loader: "url-loader"
-          }
-        ]
-      }
-    ]
   }
 };
