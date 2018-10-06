@@ -9,6 +9,11 @@ import {CSVLink} from 'react-csv';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Snackbar from '@material-ui/core/Snackbar';
+import Drawer from '@material-ui/core/Drawer';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Divider from '@material-ui/core/Divider';
+import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 
 
 
@@ -134,6 +139,8 @@ class Carlist extends Component {
 
   render() {
 	  
+	  //https://material-ui.com/demos/drawers/
+	  
     const columns = [{
       Header: 'Brand',
       accessor: 'brand',
@@ -171,7 +178,29 @@ class Carlist extends Component {
     }]
 
     return (
-    	      <div>
+    		
+    	    <div className={classes.root}>
+    	      <AppBar position="absolute" className={classes.appBar}>
+    	        <Toolbar>
+    	          <Typography variant="title" color="inherit" noWrap>
+    	            Clipped drawer
+    	          </Typography>
+    	        </Toolbar>
+    	      </AppBar>
+    	      <Drawer
+    	        variant="permanent"
+    	        classes={{
+    	          paper: classes.drawerPaper,
+    	        }}
+    	      >
+    	        <div className={classes.toolbar} />
+    	        <List>{mailFolderListItems}</List>
+    	        <Divider />
+    	        <List>{otherMailFolderListItems}</List>
+    	      </Drawer>
+    	      <main className={classes.content}>
+    	        <div className={classes.toolbar} />
+      	      <div>
     	        <Grid container>
     	          <Grid item>
     	          <AddCar addCar={this.addCar} fetchCars={this.fetchCars}/>
@@ -187,6 +216,9 @@ class Carlist extends Component {
     	          open={this.state.open}  onClose={this.handleClose} 
     	          autoHideDuration={1500} message={this.state.message} />
     	      </div>
+    	      </main>
+    	    </div>
+    		
     	    );
 
 

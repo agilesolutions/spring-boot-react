@@ -53,7 +53,6 @@ class Login extends Component {
     else {
       return (
         <div>
-	      <ClippedDrawer />  
 
           <br/>
           <TextField type="text" name="username" placeholder="Username" 
