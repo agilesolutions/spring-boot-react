@@ -16,7 +16,7 @@ class Login extends Component {
 
   login = () => {
     const user = {username: this.state.username, password: this.state.password};
-    fetch(SERVER_URL +'/login', {
+    fetch(SERVER_URL +'login', {
       method: 'POST',
       body: JSON.stringify(user)
     })
