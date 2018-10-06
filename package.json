@@ -1,0 +1,29 @@
+{
+  "name": "carfront",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
+    "material-ui": "latest",
+    "react": "latest",
+    "react-confirm-alert": "latest",
+    "react-csv": "latest",
+    "react-dom": "latest",
+    "react-scripts": "latest",
+    "react-skylight": "latest",
+    "react-table": "latest"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "latest",
+    "enzyme-adapter-react-16": "latest",
+    "jest-enzyme": "latest",
+    "react-test-renderer": "latest"
+  }
+}
