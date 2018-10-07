@@ -3,12 +3,14 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
 import Carlist from './Carlist';
+//import ClippedDrawer from './ClippedDrawer';
 import {SERVER_URL} from '../constants.js';
 
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {username: '', password: '', isAuthenticated: false, open: false};
+    console.log('start constructing');
   }
 
   login = () => {
@@ -19,12 +21,17 @@ class Login extends Component {
     })
     .then(res => {
       const jwtToken = res.headers.get('Authorization');
+      console.log('token value %s',jwtToken);
       if (jwtToken !== null) {
-        sessionStorage.setItem("jwt", jwtToken);
+    	  console.log('token is valid');
+    	  sessionStorage.setItem("jwt", jwtToken);
         this.setState({isAuthenticated: true});
       }
       else {
-        this.setState({open: true});
+    	  console.log('token is not valid');
+
+    	  this.setState({open: true});
+
       }
     })
     .catch(err => console.error(err)) 
