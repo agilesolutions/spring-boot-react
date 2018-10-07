@@ -10,35 +10,20 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Snackbar from '@material-ui/core/Snackbar';
 
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import { mailFolderListItems, otherMailFolderListItems } from './tileData';
-
-
 class Carlist extends Component {
-	
-	
   constructor(props) {
     super(props);
     this.state = { cars: [], open: false, message: ''};
   }
 
   componentDidMount() {
-
-
     this.fetchCars();
   }
   
   // Fetch all cars
   fetchCars = () => {
     const token = sessionStorage.getItem("jwt");
-    fetch(SERVER_URL + 'api/cars',
+    fetch(SERVER_URL + 'api/cars', 
     {
       headers: {'Authorization': token}
     })
@@ -140,38 +125,8 @@ class Carlist extends Component {
   handleClose = (event, reason) => {
     this.setState({ open: false });
   };
-  
-
 
   render() {
-	  
-	  const drawerWidth = 240;
-
-	  const styles = theme => ({
-	    root: {
-	      flexGrow: 1,
-	      height: 440,
-	      zIndex: 1,
-	      overflow: 'hidden',
-	      position: 'relative',
-	      display: 'flex',
-	    },
-	    appBar: {
-	      zIndex: theme.zIndex.drawer + 1,
-	    },
-	    drawerPaper: {
-	      position: 'relative',
-	      width: drawerWidth,
-	    },
-	    content: {
-	      flexGrow: 1,
-	      backgroundColor: theme.palette.background.default,
-	      padding: theme.spacing.unit * 3,
-	      minWidth: 0, // So the Typography noWrap works
-	    },
-	    toolbar: theme.mixins.toolbar,
-	  });  
-	  
     const columns = [{
       Header: 'Brand',
       accessor: 'brand',
@@ -189,7 +144,7 @@ class Carlist extends Component {
       accessor: 'year',
       Cell: this.renderEditable
     }, {
-      Header: 'Price €',
+      Header: 'Price â‚¬',
       accessor: 'price',
       Cell: this.renderEditable
     }, {
@@ -208,55 +163,24 @@ class Carlist extends Component {
       Cell: ({value}) => (<Button size="small" variant="flat" color="secondary" onClick={()=>{this.confirmDelete(value)}}>Delete</Button>)
     }]
 
-	const { classes } = this.props;
-
     return (
-    		// https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/drawers/ClippedDrawer.js
-    		
-    	    <div className={classes.root}>
-    	      <AppBar position="absolute" className={classes.appBar}>
-    	        <Toolbar>
-    	          <Typography variant="h6" color="inherit" noWrap>
-    	            Clipped drawer
-    	          </Typography>
-    	        </Toolbar>
-    	      </AppBar>
-    	      <Drawer
-    	        variant="permanent"
-    	        classes={{
-    	          paper: classes.drawerPaper,
-    	        }}
-    	      >
-    	        <div className={classes.toolbar} />
-    	        <List>{mailFolderListItems}</List>
-    	        <Divider />
-    	        <List>{otherMailFolderListItems}</List>
-    	      </Drawer>
-    	      <main className={classes.content}>
-    	        <div className={classes.toolbar} />
-    	        <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography>
-      	      <div>
-  	        <Grid container>
-  	          <Grid item>
-  	          <AddCar addCar={this.addCar} fetchCars={this.fetchCars}/>
-  	          </Grid>
-  	          <Grid item style={{padding: 20}}>
-  	            <CSVLink data={this.state.cars} separator=";">Export CSV</CSVLink>
-  	          </Grid>
-  	        </Grid>
+      <div className="App">
+        <Grid container>
+          <Grid item>
+          <AddCar addCar={this.addCar} fetchCars={this.fetchCars}/>
+          </Grid>
+          <Grid item style={{padding: 20}}>
+            <CSVLink data={this.state.cars} separator=";">Export CSV</CSVLink>
+          </Grid>
+        </Grid>
 
-  	        <ReactTable data={this.state.cars} columns={columns} 
-  	          filterable={true} pageSize={10}/>
-  	        <Snackbar           
-  	          open={this.state.open}  onClose={this.handleClose} 
-  	          autoHideDuration={1500} message={this.state.message} />
-  	      </div>
-    	      </main>
-    	    </div>
-    		
-    	    );
-
-
+        <ReactTable data={this.state.cars} columns={columns} 
+          filterable={true} pageSize={10}/>
+        <Snackbar           
+          open={this.state.open}  onClose={this.handleClose} 
+          autoHideDuration={1500} message={this.state.message} />
+      </div>
+    );
   }
 }
 

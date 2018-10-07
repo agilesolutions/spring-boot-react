@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Snackbar from '@material-ui/core/Snackbar';
-import ClippedDrawer from './ClippedDrawer';
+import Carlist from './Carlist';
 import {SERVER_URL} from '../constants.js';
-
-
-
 
 class Login extends Component {
   constructor(props) {
@@ -16,7 +13,7 @@ class Login extends Component {
 
   login = () => {
     const user = {username: this.state.username, password: this.state.password};
-    fetch(SERVER_URL +'login', {
+    fetch(SERVER_URL + 'login', {
       method: 'POST',
       body: JSON.stringify(user)
     })
@@ -43,16 +40,13 @@ class Login extends Component {
 
   render() {
     if (this.state.isAuthenticated === true) {
-        return (
-        	      <div>
-        	        <ClippedDrawer />    
-        	      </div>
-        	    );
+      return (<Carlist />)
     }
     else {
       return (
         <div>
-          <TextField type="text" name="username" placeholder="Username" 
+          <br/>
+          <TextField tpye="text" name="username" placeholder="Username" 
           onChange={this.handleChange} /><br/>  
           <TextField type="password" name="password" placeholder="Password" 
           onChange={this.handleChange} /><br /><br/>  
